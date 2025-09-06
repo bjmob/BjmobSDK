@@ -1,0 +1,13 @@
+//
+//  BJPrefixHeader_GG.pch
+//  BJAdsAdapter_GG
+//
+//  Created by cc on 2022/4/9.
+//
+
+#ifndef BJPrefixHeader_GG_pch
+#define BJPrefixHeader_GG_pch
+
+#import "BJAdsAdapter_GG.h"
+
+#endif /* BJPrefixHeader_GG_pch */

@@ -1,0 +1,6 @@
+framework module BJAdsAdspot {
+  umbrella header "BJAdsAdspot.h"
+  export *
+
+  module * { export * }
+}

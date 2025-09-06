@@ -1,0 +1,6 @@
+framework module BJAdsAdapter_CSJ {
+  umbrella header "BJAdsAdapter_CSJ.h"
+  export *
+
+  module * { export * }
+}

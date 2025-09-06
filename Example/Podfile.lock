@@ -1,0 +1,83 @@
+PODS:
+  - Ads-CN (6.7.0.8):
+    - Ads-CN/BUAdLive-Framework (= 6.7.0.8)
+    - Ads-CN/BUAdSDK (= 6.7.0.8)
+  - Ads-CN/BUAdLive-Framework (6.7.0.8):
+    - BUTTSDKFramework/LivePull-Lite (= 1.45.1.8-premium)
+  - Ads-CN/BUAdSDK (6.7.0.8)
+  - BaiduMobAdSDK (5.311)
+  - BjmobAdsSDK (0.0.36):
+    - Ads-CN (= 6.7.0.8)
+    - BaiduMobAdSDK (= 5.311)
+    - GDTMobSDK (= 4.14.32)
+    - Google-Mobile-Ads-SDK (= 12.8.0)
+  - Bugly (2.6.1)
+  - BUTTSDKFramework/Core (1.45.1.8-premium)
+  - BUTTSDKFramework/LiveBase (1.45.1.8-premium):
+    - BUTTSDKFramework/Core
+    - BUTTSDKFramework/Reachability
+  - BUTTSDKFramework/LivePlayer/Base (1.45.1.8-premium):
+    - BUTTSDKFramework/Core
+    - BUTTSDKFramework/LiveBase
+    - BUTTSDKFramework/Reachability
+  - BUTTSDKFramework/LivePlayer/Lite (1.45.1.8-premium):
+    - BUTTSDKFramework/LivePlayer/Base
+    - BUTTSDKFramework/PlayerCore/LiveLite
+  - BUTTSDKFramework/LivePull-Lite (1.45.1.8-premium):
+    - BUTTSDKFramework/LivePlayer/Lite
+    - BUTTSDKFramework/Strategy/Lite
+  - BUTTSDKFramework/PlayerCore/LiveLite (1.45.1.8-premium):
+    - BUTTSDKFramework/TTFFmpeg/LiveLite
+  - BUTTSDKFramework/Reachability (1.45.1.8-premium)
+  - BUTTSDKFramework/SSL (1.45.1.8-premium)
+  - BUTTSDKFramework/Strategy/Core (1.45.1.8-premium):
+    - BUTTSDKFramework/LiveBase
+    - BUTTSDKFramework/Reachability
+  - BUTTSDKFramework/Strategy/Lite (1.45.1.8-premium):
+    - BUTTSDKFramework/LivePlayer/Lite
+    - BUTTSDKFramework/Strategy/Core
+  - BUTTSDKFramework/Tools (1.45.1.8-premium):
+    - BUTTSDKFramework/SSL
+  - BUTTSDKFramework/TTFFmpeg/Base (1.45.1.8-premium):
+    - BUTTSDKFramework/Tools
+  - BUTTSDKFramework/TTFFmpeg/LiveLite (1.45.1.8-premium):
+    - BUTTSDKFramework/TTFFmpeg/Base
+  - GDTMobSDK (4.14.32):
+    - GDTMobSDK/GDTMobSDK (= 4.14.32)
+  - GDTMobSDK/GDTMobSDK (4.14.32)
+  - Google-Mobile-Ads-SDK (12.8.0):
+    - GoogleUserMessagingPlatform (>= 1.1)
+  - GoogleUserMessagingPlatform (3.0.0)
+  - Masonry (1.1.0)
+
+DEPENDENCIES:
+  - BjmobAdsSDK (= 0.0.36)
+  - Bugly
+  - Masonry (~> 1.1.0)
+
+SPEC REPOS:
+  trunk:
+    - Ads-CN
+    - BaiduMobAdSDK
+    - BjmobAdsSDK
+    - Bugly
+    - BUTTSDKFramework
+    - GDTMobSDK
+    - Google-Mobile-Ads-SDK
+    - GoogleUserMessagingPlatform
+    - Masonry
+
+SPEC CHECKSUMS:
+  Ads-CN: 4dcb5105a7105f76bcefb246e69daf6c39db2778
+  BaiduMobAdSDK: dc88bb5e9cdfb070cbb228e4b1cc3ff8b5575b6a
+  BjmobAdsSDK: 211f462e71720e44381c50cf837873f046be971a
+  Bugly: 217ac2ce5f0f2626d43dbaa4f70764c953a26a31
+  BUTTSDKFramework: 914058900f46707f12a6e8c10e8da6ba4e891c3e
+  GDTMobSDK: f67eaea373e379cc7151a76fa94de3ac5123426d
+  Google-Mobile-Ads-SDK: ece122bc89b38cab319543bc464a9ceabfe1d307
+  GoogleUserMessagingPlatform: f8d0cdad3ca835406755d0a69aa634f00e76d576
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+
+PODFILE CHECKSUM: d3c5487f38ed7a5c26d8be269f284a460448463e
+
+COCOAPODS: 1.16.2

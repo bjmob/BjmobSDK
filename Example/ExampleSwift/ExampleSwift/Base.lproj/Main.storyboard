@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ExampleSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="idfa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zU-l4-jAe">
+                                <rect key="frame" x="182" y="69" width="29" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksf-m8-k2t">
+                                <rect key="frame" x="0.0" y="164" width="393" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="QZK-kb-B4M"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="加载Banner"/>
+                                <connections>
+                                    <action selector="loadBannerTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jzG-8C-R1O"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Gh-46-A1C">
+                                <rect key="frame" x="0.0" y="226" width="393" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="3Rs-ln-uWc"/>
+                                    <constraint firstAttribute="height" constant="50" id="5Qp-RO-RTM"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="加载Splash"/>
+                                <connections>
+                                    <action selector="loadSplashTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="azK-4I-CWi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6yj-yy-0h3">
+                                <rect key="frame" x="0.0" y="288" width="393" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="IoE-kc-yU3"/>
+                                    <constraint firstAttribute="height" constant="50" id="TsJ-tI-gjf"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="加载Interstitial"/>
+                                <connections>
+                                    <action selector="loadInterstitialTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1bs-eG-hYu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7y-rn-0bB">
+                                <rect key="frame" x="0.0" y="350" width="393" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="EvH-Tg-Lvu"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="加载RewardVideo"/>
+                                <connections>
+                                    <action selector="loadRewardVideoTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="67s-vq-3Zg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1x-4F-OMU">
+                                <rect key="frame" x="0.0" y="412" width="393" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="DCd-Id-Fgz"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="加载NativeExpress"/>
+                                <connections>
+                                    <action selector="loadNativeExpressTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Htg-5g-3gF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVv-En-6Vh">
+                                <rect key="frame" x="0.0" y="102" width="393" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="cOb-YN-o8U"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="获取idfa"/>
+                                <connections>
+                                    <action selector="getIdfaTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Bl-o1-IBa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6yj-yy-0h3" secondAttribute="trailing" id="0Ut-wn-9pG"/>
+                            <constraint firstItem="cVv-En-6Vh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1F0-wv-IUv"/>
+                            <constraint firstItem="ksf-m8-k2t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6M9-fb-FuV"/>
+                            <constraint firstItem="ksf-m8-k2t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BCT-Fh-sWl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cVv-En-6Vh" secondAttribute="trailing" id="DCK-N4-iZ8"/>
+                            <constraint firstItem="6yj-yy-0h3" firstAttribute="top" secondItem="5Gh-46-A1C" secondAttribute="bottom" constant="12" id="GXb-Dx-Bfc"/>
+                            <constraint firstItem="5Gh-46-A1C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LhC-xY-I4n"/>
+                            <constraint firstItem="P1x-4F-OMU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NJO-Me-Ye2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ksf-m8-k2t" secondAttribute="trailing" id="NLc-r9-sPf"/>
+                            <constraint firstItem="ksf-m8-k2t" firstAttribute="top" secondItem="cVv-En-6Vh" secondAttribute="bottom" constant="12" id="Sn1-U9-PLx"/>
+                            <constraint firstItem="6yj-yy-0h3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WYm-vT-pf0"/>
+                            <constraint firstItem="6zU-l4-jAe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Z9t-F8-l1m"/>
+                            <constraint firstItem="cVv-En-6Vh" firstAttribute="top" secondItem="6zU-l4-jAe" secondAttribute="bottom" constant="12" id="f57-3O-oAV"/>
+                            <constraint firstItem="a7y-rn-0bB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hhY-7y-4QW"/>
+                            <constraint firstItem="5Gh-46-A1C" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="kLN-nh-owb"/>
+                            <constraint firstItem="6zU-l4-jAe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lpu-lg-O8K"/>
+                            <constraint firstItem="6yj-yy-0h3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oba-wO-EP6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="P1x-4F-OMU" secondAttribute="trailing" id="vpx-jb-hDb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a7y-rn-0bB" secondAttribute="trailing" id="wWp-lS-UPn"/>
+                            <constraint firstItem="P1x-4F-OMU" firstAttribute="top" secondItem="a7y-rn-0bB" secondAttribute="bottom" constant="12" id="wdq-Ky-I5g"/>
+                            <constraint firstItem="a7y-rn-0bB" firstAttribute="top" secondItem="6yj-yy-0h3" secondAttribute="bottom" constant="12" id="y6w-Pc-Qv6"/>
+                            <constraint firstItem="5Gh-46-A1C" firstAttribute="top" secondItem="ksf-m8-k2t" secondAttribute="bottom" constant="12" id="zU2-Rl-C62"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="idfaLabel" destination="6zU-l4-jAe" id="eP0-T9-YeK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

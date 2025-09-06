@@ -1,0 +1,28 @@
+//
+//  PrefixHeader.pch
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#import <UIKit/UIKit.h>
+#import <Masonry/Masonry.h>
+#import "AppDelegate.h"
+
+
+static inline BOOL IsIPhoneXSeries() {
+    if (@available(iOS 11.0, *)) {
+        UIWindow *mainWindow = [[[UIApplication sharedApplication] delegate] window];
+        if (mainWindow.safeAreaInsets.bottom > 0.0) {
+            return YES;
+        }
+    }
+    return NO;
+}
+
+
+#define kAppTopH    (IsIPhoneXSeries()?88:64)
+#define kAppBottomH (IsIPhoneXSeries()?34:0)
+
+
+
+#endif /* PrefixHeader_pch */

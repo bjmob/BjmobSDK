@@ -1,0 +1,13 @@
+//
+//  PrefixHeader_Adspot.pch
+//  BJAdsAdspot
+//
+//  Created by cc on 2022/3/28.
+//
+
+#ifndef PrefixHeader_Adspot_pch
+#define PrefixHeader_Adspot_pch
+
+#import "BJAdsAdspot.h"
+
+#endif /* PrefixHeader_Adspot_pch */
