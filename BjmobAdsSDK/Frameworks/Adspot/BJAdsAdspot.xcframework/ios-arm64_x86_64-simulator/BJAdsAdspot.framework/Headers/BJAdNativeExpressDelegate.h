@@ -29,6 +29,8 @@
 - (void)ad_NativeExpressOnAdClicked:(nullable BJAdNativeExpressView *)adView;
 /// 广告被关闭 (注: 百度广告(百青藤), 不支持该回调, 若使用百青藤,则该回到功能请自行实现)
 - (void)ad_NativeExpressOnAdClosed:(nullable BJAdNativeExpressView *)adView;
+/// 广告点击不喜欢原因后发送
+- (void)ad_NativeExpressOnAdDislike:(nullable BJAdNativeExpressView *)adView;
 
 @end
 

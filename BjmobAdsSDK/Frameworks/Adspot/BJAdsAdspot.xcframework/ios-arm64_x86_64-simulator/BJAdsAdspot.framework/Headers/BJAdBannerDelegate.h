@@ -1,9 +1,9 @@
 //
-//  BJAdBannerProtocol.h
+//  BJAdBannerDelegate.h
 //
 
-#ifndef BJAdBannerProtocol_h
-#define BJAdBannerProtocol_h
+#ifndef BJAdBannerDelegate_h
+#define BJAdBannerDelegate_h
 
 #import <BJAdsAdspot/BJAdBaseDelegate.h>
 

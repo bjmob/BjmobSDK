@@ -184,6 +184,11 @@
     [_dataArrM removeObject: adView];
 }
 
+- (void)ad_NativeExpressOnAdDislike:(nullable BJAdNativeExpressView *)adView {
+    NSLog(@"广告不喜欢 %s", __func__);
+    [_dataArrM removeObject: adView];
+}
+
 #pragma mark - lazy
 - (BJAdNativeExpress *)advanceFeed{
     if(!_advanceFeed){
