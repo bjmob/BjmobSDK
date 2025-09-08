@@ -98,5 +98,9 @@ class ViewController: UIViewController,BJAdNativeExpressDelegate,BJAdBannerDeleg
         adView?.expressView.removeFromSuperview()
     }
     
+    func ad_NativeExpress(onAdDislike adView: BJAdNativeExpressView?) {
+        print("ad_NativeExpress -- onAdDislike")
+    }
+    
 }
 
