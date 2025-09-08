@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "BjmobAdsSDK"
-  spec.version      = "0.0.37"
+  spec.version      = "0.0.38"
   spec.ios.deployment_target = '12.0'
   spec.platform     = :ios, "12.0"
   spec.requires_arc = true
