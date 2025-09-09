@@ -8,8 +8,9 @@ target 'ExampleSwift' do
   project 'ExampleSwift/ExampleSwift.xcodeproj'
 #  pod 'Masonry', '~> 1.1.0'
 #  pod 'BjmobAdsSDK', :path => '../'
-  #pod 'BjmobAdsSDK', '0.0.36'
-  pod 'BjmobAdsSDK', :git  => 'https://github.com/lixiuran/BjmobSDK.git', :tag =>'0.0.38'
+#  pod 'BjmobAdsSDK', '0.0.37'
+   pod 'BjmobSDK', :git => 'https://github.com/bjmob/BjmobSDK.git', :tag => '1.0.37'
+
   pod 'Bugly'
 end
 
@@ -17,10 +18,10 @@ target 'Example' do
   use_frameworks!
   project 'Example/Example.xcodeproj'
   pod 'Masonry', '~> 1.1.0'
-  # pod 'BjmobAdsSDK', :path => '../'
-  #pod 'BjmobAdsSDK', '0.0.36'
-  
- pod 'BjmobAdsSDK', :git  => 'https://github.com/lixiuran/BjmobSDK.git', :tag =>'0.0.38'
+#  pod 'BjmobAdsSDK', :path => '../'
+  #pod 'BjmobAdsSDK', '0.0.37'
+  pod 'BjmobSDK', :git => 'https://github.com/bjmob/BjmobSDK.git', :tag => '1.0.37'
+
 end
 
 
