@@ -6,7 +6,7 @@ PODS:
     - BUTTSDKFramework/LivePull-Lite (= 1.45.1.8-premium)
   - Ads-CN/BUAdSDK (6.7.0.8)
   - BaiduMobAdSDK (5.311)
-  - BjmobSDK (0.0.38):
+  - BjmobSDK (0.0.39):
     - Ads-CN (= 6.7.0.8)
     - BaiduMobAdSDK (= 5.311)
     - GDTMobSDK (= 4.14.32)
@@ -51,7 +51,7 @@ PODS:
   - Masonry (1.1.0)
 
 DEPENDENCIES:
-  - BjmobSDK (= 0.0.38)
+  - BjmobSDK (from `../`)
   - Bugly
   - Masonry (~> 1.1.0)
 
@@ -59,7 +59,6 @@ SPEC REPOS:
   trunk:
     - Ads-CN
     - BaiduMobAdSDK
-    - BjmobSDK
     - Bugly
     - BUTTSDKFramework
     - GDTMobSDK
@@ -67,10 +66,14 @@ SPEC REPOS:
     - GoogleUserMessagingPlatform
     - Masonry
 
+EXTERNAL SOURCES:
+  BjmobSDK:
+    :path: "../"
+
 SPEC CHECKSUMS:
   Ads-CN: 4dcb5105a7105f76bcefb246e69daf6c39db2778
   BaiduMobAdSDK: dc88bb5e9cdfb070cbb228e4b1cc3ff8b5575b6a
-  BjmobSDK: db15f46377db23cdfb23394d81a1de1ac36ad9ca
+  BjmobSDK: 023295c74ee6a272fec6d14e7e366c2d59d5eca6
   Bugly: 217ac2ce5f0f2626d43dbaa4f70764c953a26a31
   BUTTSDKFramework: 914058900f46707f12a6e8c10e8da6ba4e891c3e
   GDTMobSDK: f67eaea373e379cc7151a76fa94de3ac5123426d
@@ -78,6 +81,6 @@ SPEC CHECKSUMS:
   GoogleUserMessagingPlatform: f8d0cdad3ca835406755d0a69aa634f00e76d576
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
-PODFILE CHECKSUM: b052d217ad6260cba1135be47d0bb8584413c66f
+PODFILE CHECKSUM: 68f33dfcc15fd1564461c4727098e4e2a0bbbf95
 
 COCOAPODS: 1.16.2

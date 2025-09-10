@@ -1,5 +1,5 @@
 #
-#  Be sure to run `pod spec lint BjmobAdsSDK.podspec' to ensure this is a
+#  Be sure to run `pod spec lint BjmobSDK.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see https://guides.cocoapods.org/syntax/podspec.html
@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "BjmobSDK"
-  spec.version      = "0.0.38"
+  spec.version      = "0.0.39"
   spec.ios.deployment_target = '12.0'
   spec.platform     = :ios, "12.0"
   spec.swift_versions = ['5.0', '5.1', '5.2', '5.3', '5.4', '5.5', '5.6', '5.7', '5.8', '5.9']
@@ -42,23 +42,23 @@ Pod::Spec.new do |spec|
   
 
 #  spec.subspec 'Core' do |core|
-#    core.source_files = 'BjmobAdsSDK/**/*.{h,m}'
+#    core.source_files = 'BjmobSDK/**/*.{h,m}'
 #    core.frameworks = 'UIKit', 'Foundation', 'AdSupport'
 #  end
 #
 #  spec.subspec 'Adspot' do |adspot|
-#    adspot.dependency 'BjmobAdsSDK/Core'
-#    adspot.source_files = 'BjmobAdsSDK/**/*.{h,m}'
+#    adspot.dependency 'BjmobSDK/Core'
+#    adspot.source_files = 'BjmobSDK/**/*.{h,m}'
 #  end
-  spec.resource = 'BjmobAdsSDK/Resources/GGResource.bundle'
+  spec.resource = 'BjmobSDK/Resources/GGResource.bundle'
 
 
   spec.vendored_frameworks = [
-    'BjmobAdsSDK/Frameworks/Adspot/BJAdsAdspot.xcframework',
-    'BjmobAdsSDK/Frameworks/core/BJAdsCore.xcframework',
-    'BjmobAdsSDK/Frameworks/Adapter/BJAdsAdapter_CSJ.xcframework',
-    'BjmobAdsSDK/Frameworks/Adapter/BJAdsAdapter_GDT.xcframework',
-    'BjmobAdsSDK/Frameworks/Adapter/BJAdsAdapter_GG.xcframework'
+    'BjmobSDK/Frameworks/Adspot/BJAdsAdspot.xcframework',
+    'BjmobSDK/Frameworks/core/BJAdsCore.xcframework',
+    'BjmobSDK/Frameworks/Adapter/BJAdsAdapter_CSJ.xcframework',
+    'BjmobSDK/Frameworks/Adapter/BJAdsAdapter_GDT.xcframework',
+    'BjmobSDK/Frameworks/Adapter/BJAdsAdapter_GG.xcframework'
   ]
   
   spec.dependency 'Ads-CN', '6.7.0.8'
@@ -72,10 +72,10 @@ Pod::Spec.new do |spec|
   valid_archs = ['armv7', 'armv7s', 'x86_64', 'arm64']
 
 #  spec.subspec 'CSJ' do |csj|
-#      csj.dependency 'BjmobAdsSDK/Core'
-#      csj.dependency 'BjmobAdsSDK/Adspot'
+#      csj.dependency 'BjmobSDK/Core'
+#      csj.dependency 'BjmobSDK/Adspot'
 #      csj.dependency 'Ads-CN'
-#      csj.source_files = 'BjmobAdsSDK/**/*.{h,m}'
+#      csj.source_files = 'BjmobSDK/**/*.{h,m}'
 #      csj.frameworks = 'UIKit', 'MapKit', 'WebKit', 'MediaPlayer', 'CoreLocation', 'AdSupport', 'CoreMedia', 'AVFoundation', 'CoreTelephony', 'StoreKit', 'SystemConfiguration', 'MobileCoreServices', 'CoreMotion', 'Accelerate','AudioToolbox','JavaScriptCore','Security','CoreImage','AudioToolbox','ImageIO','QuartzCore','CoreGraphics','CoreText'
 #      csj.libraries = 'c++', 'resolv', 'z', 'sqlite3', 'bz2', 'xml2', 'iconv', 'c++abi'
 #      #    valid_archs = ['armv7', 'i386', 'x86_64', 'arm64']

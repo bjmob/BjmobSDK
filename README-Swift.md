@@ -1,12 +1,12 @@
 
-# BjmobAdsSDK-Swift 快速指引
+# BjmobSDK-Swift 快速指引
 
 ## 1.1 引入SDK
 
 ### 在项目Podfile文件中加入
 
 ``` ruby
-  pod 'BjmobAdsSDK', '0.0.28'
+  pod 'BjmobSDK', '0.0.38'
 ```
 
 执行 pod install 命令

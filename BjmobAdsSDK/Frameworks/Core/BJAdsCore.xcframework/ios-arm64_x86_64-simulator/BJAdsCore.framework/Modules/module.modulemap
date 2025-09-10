@@ -1,6 +1,0 @@
-framework module BJAdsCore {
-  umbrella header "BJAdsCore.h"
-  export *
-
-  module * { export * }
-}

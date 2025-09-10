@@ -1,9 +1,9 @@
-# BjmobAdsSDK-iOS 快速指引
+# BjmobSDK-iOS 快速指引
 
 
 ## 1. 快速接入
 
-下面介绍BjmobAds的快速接入方法，开发中也可以参考[Example](https://github.com/bjmob/BjmobSDK/tree/main/Example)下的示例工程，快速了解。
+下面介绍BjmobSDK的快速接入方法，开发中也可以参考[Example](https://github.com/bjmob/BjmobSDK/tree/main/Example)下的示例工程，快速了解。
 
 ### 1.1 开发环境准备
 
@@ -245,18 +245,6 @@
 ```
   <key>NSUserTrackingUsageDescription</key>
   <string>请求idfa权限</string>
-```
-
-#### 1.3.5 添加初始化数据文件
-
-将开发者提供的下面5个文件添加到项目中
-
-```
-bjads_info_adsTypeNative.txt
-bjads_info_adsTypeBanner.txt
-bjads_info_adsTypeSplash.txt
-bjads_info_adsTypeRewardVideo.txt
-bjads_info_adsTypeInterstitial.txt
 ```
 
 ## 1.4 编辑 Appdelegate.m
