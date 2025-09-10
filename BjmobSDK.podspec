@@ -55,7 +55,7 @@ Pod::Spec.new do |spec|
 
   spec.vendored_frameworks = [
     'BjmobSDK/Frameworks/Adspot/BJAdsAdspot.xcframework',
-    'BjmobSDK/Frameworks/core/BJAdsCore.xcframework',
+    'BjmobSDK/Frameworks/Core/BJAdsCore.xcframework',
     'BjmobSDK/Frameworks/Adapter/BJAdsAdapter_CSJ.xcframework',
     'BjmobSDK/Frameworks/Adapter/BJAdsAdapter_GDT.xcframework',
     'BjmobSDK/Frameworks/Adapter/BJAdsAdapter_GG.xcframework'
