@@ -3,7 +3,7 @@
 
 ## 1. 快速接入
 
-下面介绍BjmobAds的快速接入方法，开发中也可以参考[Example](https://github.com/bigbigpro/BjmobAdsSDK/tree/main/Example)下的示例工程，快速了解。
+下面介绍BjmobAds的快速接入方法，开发中也可以参考[Example](https://github.com/bjmob/BjmobSDK/tree/main/Example)下的示例工程，快速了解。
 
 ### 1.1 开发环境准备
 
@@ -13,7 +13,7 @@
 ### 1.2 引入SDK
 
 ```
-  pod 'BjmobAdsSDK', '0.0.35'
+  pod 'BjmobSDK', '0.0.38'
   
   
   执行 pod install --repo-update
@@ -299,19 +299,6 @@ bjads_info_adsTypeInterstitial.txt
       }
   }
 ```
-
-## 1.5 各广告位集成实现
-
-* [开屏广告：BjmobAdSplash](https://github.com/bigbigpro/BjmobAdsSDK/wiki/splash_ad)
-
-* [插屏广告：BjmobAdInterstitial](https://github.com/bigbigpro/BjmobAdsSDK/wiki/Interstitial_ad)
-
-* [横幅广告：BjmobAdBanner](https://github.com/bigbigpro/BjmobAdsSDK/wiki/banner_ad)
-
-* [原生模板、信息流广告：BjmobAdNativeExpress](https://github.com/bigbigpro/BjmobAdsSDK/wiki/native_express_ad)
-
-* [激励视频广告：BjmobAdRewardVideo](https://github.com/bigbigpro/BjmobAdsSDK/wiki/reward_video_ad)
-
 
 
 
