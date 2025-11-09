@@ -15,10 +15,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "01DC32BF2A7CA0BE0068983D"
-               BuildableName = "DemoSwfit.app"
-               BlueprintName = "DemoSwfit"
-               ReferencedContainer = "container:ExampleSwift.xcodeproj">
+               BlueprintIdentifier = "01706A0A2A0B741600D7D7AF"
+               BuildableName = "DemoOc.app"
+               BlueprintName = "DemoOc"
+               ReferencedContainer = "container:Example.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -31,7 +31,7 @@
       shouldAutocreateTestPlan = "YES">
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -44,10 +44,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "01DC32BF2A7CA0BE0068983D"
-            BuildableName = "DemoSwfit.app"
-            BlueprintName = "DemoSwfit"
-            ReferencedContainer = "container:ExampleSwift.xcodeproj">
+            BlueprintIdentifier = "01706A0A2A0B741600D7D7AF"
+            BuildableName = "DemoOc.app"
+            BlueprintName = "DemoOc"
+            ReferencedContainer = "container:Example.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -61,10 +61,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "01DC32BF2A7CA0BE0068983D"
-            BuildableName = "DemoSwfit.app"
-            BlueprintName = "DemoSwfit"
-            ReferencedContainer = "container:ExampleSwift.xcodeproj">
+            BlueprintIdentifier = "01706A0A2A0B741600D7D7AF"
+            BuildableName = "DemoOc.app"
+            BlueprintName = "DemoOc"
+            ReferencedContainer = "container:Example.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		01DC32C02A7CA0BE0068983D /* ExampleSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01DC32C02A7CA0BE0068983D /* DemoSwfit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoSwfit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01DC32C32A7CA0BE0068983D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01DC32C52A7CA0BE0068983D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		01DC32C72A7CA0BE0068983D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 		01DC32C12A7CA0BE0068983D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				01DC32C02A7CA0BE0068983D /* ExampleSwift.app */,
+				01DC32C02A7CA0BE0068983D /* DemoSwfit.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,9 +95,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		01DC32BF2A7CA0BE0068983D /* ExampleSwift */ = {
+		01DC32BF2A7CA0BE0068983D /* DemoSwfit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 01DC32D42A7CA0BF0068983D /* Build configuration list for PBXNativeTarget "ExampleSwift" */;
+			buildConfigurationList = 01DC32D42A7CA0BF0068983D /* Build configuration list for PBXNativeTarget "DemoSwfit" */;
 			buildPhases = (
 				9FD424EEFE11BC83E7152668 /* [CP] Check Pods Manifest.lock */,
 				01DC32BC2A7CA0BE0068983D /* Sources */,
@@ -110,9 +110,9 @@
 			);
 			dependencies = (
 			);
-			name = ExampleSwift;
+			name = DemoSwfit;
 			productName = ExampleSwift;
-			productReference = 01DC32C02A7CA0BE0068983D /* ExampleSwift.app */;
+			productReference = 01DC32C02A7CA0BE0068983D /* DemoSwfit.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -143,7 +143,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				01DC32BF2A7CA0BE0068983D /* ExampleSwift */,
+				01DC32BF2A7CA0BE0068983D /* DemoSwfit */,
 			);
 		};
 /* End PBXProject section */
@@ -170,9 +170,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ExampleSwift/Pods-ExampleSwift-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ExampleSwift/Pods-ExampleSwift-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -187,9 +191,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ExampleSwift/Pods-ExampleSwift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ExampleSwift/Pods-ExampleSwift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -449,7 +457,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		01DC32D42A7CA0BF0068983D /* Build configuration list for PBXNativeTarget "ExampleSwift" */ = {
+		01DC32D42A7CA0BF0068983D /* Build configuration list for PBXNativeTarget "DemoSwfit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				01DC32D52A7CA0BF0068983D /* Debug */,

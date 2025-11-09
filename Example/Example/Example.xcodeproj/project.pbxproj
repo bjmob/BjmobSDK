@@ -25,7 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		01706A0B2A0B741600D7D7AF /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01706A0B2A0B741600D7D7AF /* DemoOc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoOc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01706A0E2A0B741600D7D7AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		01706A0F2A0B741600D7D7AF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		01706A142A0B741600D7D7AF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 		01706A0C2A0B741600D7D7AF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				01706A0B2A0B741600D7D7AF /* Example.app */,
+				01706A0B2A0B741600D7D7AF /* DemoOc.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -178,9 +178,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		01706A0A2A0B741600D7D7AF /* Example */ = {
+		01706A0A2A0B741600D7D7AF /* DemoOc */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 01706A242A0B741800D7D7AF /* Build configuration list for PBXNativeTarget "Example" */;
+			buildConfigurationList = 01706A242A0B741800D7D7AF /* Build configuration list for PBXNativeTarget "DemoOc" */;
 			buildPhases = (
 				6F877870CFDA6EF9443B3211 /* [CP] Check Pods Manifest.lock */,
 				01706A072A0B741600D7D7AF /* Sources */,
@@ -193,9 +193,9 @@
 			);
 			dependencies = (
 			);
-			name = Example;
+			name = DemoOc;
 			productName = Example;
-			productReference = 01706A0B2A0B741600D7D7AF /* Example.app */;
+			productReference = 01706A0B2A0B741600D7D7AF /* DemoOc.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -225,7 +225,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				01706A0A2A0B741600D7D7AF /* Example */,
+				01706A0A2A0B741600D7D7AF /* DemoOc */,
 			);
 		};
 /* End PBXProject section */
@@ -252,9 +252,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -269,9 +273,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -535,7 +543,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		01706A242A0B741800D7D7AF /* Build configuration list for PBXNativeTarget "Example" */ = {
+		01706A242A0B741800D7D7AF /* Build configuration list for PBXNativeTarget "DemoOc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				01706A252A0B741800D7D7AF /* Debug */,
