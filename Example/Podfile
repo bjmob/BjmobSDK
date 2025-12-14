@@ -9,7 +9,7 @@ target 'ExampleSwift' do
 #  pod 'Masonry', '~> 1.1.0'
 #   pod 'BjmobSDK', :path => '../'
    #pod 'BjmobSDK', :git => 'https://github.com/bjmob/BjmobSDK.git', :tag => '0.0.37'
-    pod 'BjmobSDK', '0.0.40'
+    pod 'BjmobSDK', '0.1.41'
 
   pod 'Bugly'
 end
@@ -20,7 +20,7 @@ target 'Example' do
   pod 'Masonry', '~> 1.1.0'
 #  pod 'BjmobSDK', :path => '../'
   #pod 'BjmobSDK', :git => 'https://github.com/bjmob/BjmobSDK.git', :tag => '0.0.38'
-   pod 'BjmobSDK', '0.0.40'
+   pod 'BjmobSDK', '0.1.41'
 
 end
 
