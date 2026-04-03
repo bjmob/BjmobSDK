@@ -1,0 +1,6 @@
+framework module BJAdsAdapter_KS {
+  umbrella header "BJAdsAdapter_KS.h"
+  export *
+
+  module * { export * }
+}

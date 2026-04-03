@@ -1,0 +1,6 @@
+framework module BJAdsAdapter_PAG {
+  umbrella header "BJAdsAdapter_PAG.h"
+  export *
+
+  module * { export * }
+}
