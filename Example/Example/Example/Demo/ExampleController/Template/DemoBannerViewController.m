@@ -8,6 +8,7 @@
 
 @interface DemoBannerViewController () <BJAdBannerDelegate>
 @property (nonatomic, strong) BJAdBanner *adBanner;
+@property (nonatomic, strong) UIView *bannerContainer;
 @end
 
 @implementation DemoBannerViewController
@@ -17,6 +18,22 @@
     self.title = @"Banner";
     self.dic = [[AdDataJsonManager shared] loadAdDataWithType:JsonDataType_banner];
     self.isOnlyLoad = NO;
+    [self setupBannerContainer];
+}
+
+- (void)setupBannerContainer {
+    CGFloat scale = 100.0 / 640.0;
+    CGFloat h = self.view.bounds.size.width * scale;
+    UIEdgeInsets insets = UIEdgeInsetsZero;
+    if (@available(iOS 11.0, *)) {
+        insets = self.view.safeAreaInsets;
+    }
+    CGFloat y = self.view.bounds.size.height - insets.bottom - h-100;
+    UIView *container = [[UIView alloc] initWithFrame:CGRectMake(0, y, self.view.bounds.size.width, h)];
+    container.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth;
+    container.backgroundColor = UIColor.clearColor;
+    [self.view addSubview:container];
+    self.bannerContainer = container;
 }
 
 - (void)loadAndShowAd{
@@ -102,6 +119,7 @@
         }
 //        _adBanner.y = 300;
         _adBanner.delegate = self;
+        _adBanner.adContainer = self.bannerContainer;
     }
     return _adBanner;
 }

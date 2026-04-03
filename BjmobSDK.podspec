@@ -27,59 +27,82 @@ Pod::Spec.new do |spec|
   spec.author       = { "bjmob" => "769871707@qq.com" }
   spec.source       = { :git => "https://github.com/bjmob/BjmobSDK.git", :tag => "#{spec.version}" }
   
-  spec.user_target_xcconfig = {'OTHER_LDFLAGS' => ['-ObjC']}
-  spec.info_plist = {'GADApplicationIdentifier' => 'ca-app-pub-3940256099942544~1458002511'}
-
-  valid_archs = ['i386', 'armv7', 'x86_64', 'arm64']
-
-  spec.pod_target_xcconfig = { 'ENABLE_BITCODE' => 'NO'}
-  spec.user_target_xcconfig = { 'ENABLE_BITCODE' => 'NO'}
+  spec.user_target_xcconfig = { 'OTHER_LDFLAGS' => ['-ObjC'], 'ENABLE_BITCODE' => 'NO' }
+  spec.pod_target_xcconfig  = { 'ENABLE_BITCODE' => 'NO' }
+  spec.info_plist = { 'GADApplicationIdentifier' => 'ca-app-pub-3940256099942544~1458002511' }
   
-#  spec.default_subspec = 'Core'
-  
-  spec.requires_arc = true
-#  spec.static_framework = true  #是否为静态库
-  
+  spec.default_subspecs = 'Core'
 
-#  spec.subspec 'Core' do |core|
-#    core.source_files = 'BjmobSDK/**/*.{h,m}'
-#    core.frameworks = 'UIKit', 'Foundation', 'AdSupport'
-#  end
-#
-#  spec.subspec 'Adspot' do |adspot|
-#    adspot.dependency 'BjmobSDK/Core'
-#    adspot.source_files = 'BjmobSDK/**/*.{h,m}'
-#  end
-  spec.resource = 'BjmobSDK/Resources/GGResource.bundle'
-
-
-  spec.vendored_frameworks = [
-    'BjmobSDK/Frameworks/Adspot/BJAdsAdspot.xcframework',
-    'BjmobSDK/Frameworks/Core/BJAdsCore.xcframework',
-    'BjmobSDK/Frameworks/Adapter/BJAdsAdapter_CSJ.xcframework',
-    'BjmobSDK/Frameworks/Adapter/BJAdsAdapter_GDT.xcframework',
-    'BjmobSDK/Frameworks/Adapter/BJAdsAdapter_GG.xcframework'
-  ]
-  
-  spec.dependency 'Ads-CN', '6.7.0.8'
-  spec.dependency 'BaiduMobAdSDK', '5.311'
-  spec.dependency 'GDTMobSDK', '4.14.32'
-  spec.dependency 'Google-Mobile-Ads-SDK','12.8.0'
-  
-  spec.frameworks = 'CoreLocation', 'SystemConfiguration', 'CoreGraphics', 'CoreMotion', 'CoreTelephony', 'AdSupport', 'SystemConfiguration', 'QuartzCore', 'WebKit', 'MessageUI','SafariServices','AVFoundation','EventKit','QuartzCore','CoreMedia','StoreKit'
-  spec.libraries     = 'c++'
-  spec.weak_frameworks = "WebKit"
   valid_archs = ['armv7', 'armv7s', 'x86_64', 'arm64']
 
-#  spec.subspec 'CSJ' do |csj|
-#      csj.dependency 'BjmobSDK/Core'
-#      csj.dependency 'BjmobSDK/Adspot'
-#      csj.dependency 'Ads-CN'
-#      csj.source_files = 'BjmobSDK/**/*.{h,m}'
-#      csj.frameworks = 'UIKit', 'MapKit', 'WebKit', 'MediaPlayer', 'CoreLocation', 'AdSupport', 'CoreMedia', 'AVFoundation', 'CoreTelephony', 'StoreKit', 'SystemConfiguration', 'MobileCoreServices', 'CoreMotion', 'Accelerate','AudioToolbox','JavaScriptCore','Security','CoreImage','AudioToolbox','ImageIO','QuartzCore','CoreGraphics','CoreText'
-#      csj.libraries = 'c++', 'resolv', 'z', 'sqlite3', 'bz2', 'xml2', 'iconv', 'c++abi'
-#      #    valid_archs = ['armv7', 'i386', 'x86_64', 'arm64']
-#  end
+  # ══════════ Core: 核心 + 广告位（合并） ══════════
+  spec.subspec 'Core' do |core|
+    core.vendored_frameworks = [
+      'BjmobSDK/Frameworks/Core/BJAdsCore.xcframework',
+      'BjmobSDK/Frameworks/Adspot/BJAdsAdspot.xcframework'
+    ]
+    core.frameworks = 'CoreLocation', 'SystemConfiguration', 'CoreGraphics',
+                      'CoreMotion', 'CoreTelephony', 'AdSupport', 'QuartzCore',
+                      'WebKit', 'MessageUI', 'SafariServices', 'AVFoundation',
+                      'EventKit', 'CoreMedia', 'StoreKit'
+    core.libraries = 'c++'
+    core.weak_frameworks = 'WebKit'
+  end
+
+  # ══════════ CSJ: 穿山甲（国内）适配器 ══════════
+  spec.subspec 'CSJ' do |csj|
+    csj.dependency 'BjmobSDK/Core'
+    csj.dependency 'Ads-CN', '6.7.0.8'
+    csj.vendored_frameworks = [
+      'BjmobSDK/Frameworks/Adapter/BJAdsAdapter_CSJ.xcframework'
+    ]
+  end
+
+  # ══════════ GDT: 广点通适配器 ══════════
+  spec.subspec 'GDT' do |gdt|
+    gdt.dependency 'BjmobSDK/Core'
+    gdt.dependency 'GDTMobSDK'
+    gdt.vendored_frameworks = [
+      'BjmobSDK/Frameworks/Adapter/BJAdsAdapter_GDT.xcframework'
+    ]
+  end
+
+  # ══════════ KS: 快手适配器 ══════════
+  spec.subspec 'KS' do |ks|
+    ks.dependency 'BjmobSDK/Core'
+    ks.dependency 'KSAdSDK', '4.12.20.3'
+    ks.vendored_frameworks = [
+      'BjmobSDK/Frameworks/Adapter/BJAdsAdapter_KS.xcframework'
+    ]
+  end
+
+  # ══════════ BD: 百度适配器 ══════════
+  spec.subspec 'BD' do |bd|
+    bd.dependency 'BjmobSDK/Core'
+    bd.dependency 'BaiduMobAdSDK', '10.032'
+    bd.vendored_frameworks = [
+      'BjmobSDK/Frameworks/Adapter/BJAdsAdapter_BD.xcframework'
+    ]
+  end
+
+  # ══════════ GG: Google AdMob 适配器 ══════════
+  spec.subspec 'GG' do |gg|
+    gg.dependency 'BjmobSDK/Core'
+    gg.dependency 'Google-Mobile-Ads-SDK', '12.8.0'
+    gg.vendored_frameworks = [
+      'BjmobSDK/Frameworks/Adapter/BJAdsAdapter_GG.xcframework'
+    ]
+    gg.resource = 'BjmobSDK/Resources/GGResource.bundle'
+  end
+
+  # ══════════ PAG: Pangle（海外穿山甲）适配器 ══════════
+  spec.subspec 'PAG' do |pag|
+    pag.dependency 'BjmobSDK/Core'
+    pag.dependency 'Ads-Global/PangleSDK', '7.9.0.6'
+    pag.vendored_frameworks = [
+      'BjmobSDK/Frameworks/Adapter/BJAdsAdapter_PAG.xcframework'
+    ]
+  end
 
   
 

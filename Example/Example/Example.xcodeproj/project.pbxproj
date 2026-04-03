@@ -21,7 +21,7 @@
 		01706A4E2A0C937D00D7D7AF /* DemoBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01706A342A0C937D00D7D7AF /* DemoBannerViewController.m */; };
 		01706A552A0C937D00D7D7AF /* AdDataJsonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 01706A3E2A0C937D00D7D7AF /* AdDataJsonManager.m */; };
 		01706A562A0C937D00D7D7AF /* DemoUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 01706A402A0C937D00D7D7AF /* DemoUtils.m */; };
-		77BCE242A90A583770196307 /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75C9BF7C63C9A9C6841A7E79 /* Pods_Example.framework */; };
+		F67775B380C113ECEEDDC57B /* Pods_DemoOc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0A7B9C3C91E73FE3368880 /* Pods_DemoOc.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +51,9 @@
 		01706A3E2A0C937D00D7D7AF /* AdDataJsonManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdDataJsonManager.m; sourceTree = "<group>"; };
 		01706A402A0C937D00D7D7AF /* DemoUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoUtils.m; sourceTree = "<group>"; };
 		01706A412A0C937D00D7D7AF /* DemoUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoUtils.h; sourceTree = "<group>"; };
-		75C9BF7C63C9A9C6841A7E79 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A0A7B9C3C91E73FE3368880 /* Pods_DemoOc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoOc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BB1CDD9CA9EED6AC388125A /* Pods-DemoOc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoOc.release.xcconfig"; path = "../../Pods/Target Support Files/Pods-DemoOc/Pods-DemoOc.release.xcconfig"; sourceTree = "<group>"; };
+		2958128E08E68F7C625E0703 /* Pods-DemoOc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoOc.debug.xcconfig"; path = "../../Pods/Target Support Files/Pods-DemoOc/Pods-DemoOc.debug.xcconfig"; sourceTree = "<group>"; };
 		A5B4446C5A3E33DC50E7AF62 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "../../Pods/Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		E8D895F01E59AC57FD1CC991 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "../../Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77BCE242A90A583770196307 /* Pods_Example.framework in Frameworks */,
+				F67775B380C113ECEEDDC57B /* Pods_DemoOc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,7 +163,7 @@
 		AAF23C3E89CF0F9382972341 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				75C9BF7C63C9A9C6841A7E79 /* Pods_Example.framework */,
+				0A0A7B9C3C91E73FE3368880 /* Pods_DemoOc.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -171,6 +173,8 @@
 			children = (
 				E8D895F01E59AC57FD1CC991 /* Pods-Example.debug.xcconfig */,
 				A5B4446C5A3E33DC50E7AF62 /* Pods-Example.release.xcconfig */,
+				2958128E08E68F7C625E0703 /* Pods-DemoOc.debug.xcconfig */,
+				1BB1CDD9CA9EED6AC388125A /* Pods-DemoOc.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -250,19 +254,19 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-DemoOc/Pods-DemoOc-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			inputPaths = (
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-DemoOc/Pods-DemoOc-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DemoOc/Pods-DemoOc-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5FB44AB264E014228F7479D0 /* [CP] Copy Pods Resources */ = {
@@ -271,19 +275,19 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-DemoOc/Pods-DemoOc-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			inputPaths = (
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-DemoOc/Pods-DemoOc-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DemoOc/Pods-DemoOc-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6F877870CFDA6EF9443B3211 /* [CP] Check Pods Manifest.lock */ = {
@@ -301,7 +305,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Example-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-DemoOc-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -469,7 +473,7 @@
 		};
 		01706A252A0B741800D7D7AF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E8D895F01E59AC57FD1CC991 /* Pods-Example.debug.xcconfig */;
+			baseConfigurationReference = 2958128E08E68F7C625E0703 /* Pods-DemoOc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -492,7 +496,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.3;
-				PRODUCT_BUNDLE_IDENTIFIER = com.still.ocdemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.still.bjmob;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -501,7 +505,7 @@
 		};
 		01706A262A0B741800D7D7AF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A5B4446C5A3E33DC50E7AF62 /* Pods-Example.release.xcconfig */;
+			baseConfigurationReference = 1BB1CDD9CA9EED6AC388125A /* Pods-DemoOc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -524,7 +528,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.3;
-				PRODUCT_BUNDLE_IDENTIFIER = com.still.ocdemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.still.bjmob;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";

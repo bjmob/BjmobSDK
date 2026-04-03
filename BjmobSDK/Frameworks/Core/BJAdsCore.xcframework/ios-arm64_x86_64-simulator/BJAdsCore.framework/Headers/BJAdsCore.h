@@ -16,6 +16,7 @@
 #import <BJAdsCore/BJAdModel.h>
 #import <BJAdsCore/NSObject+BJAdModel.h>
 #import <BJAdsCore/BJAdError.h>
+#import <BJAdsCore/BJAdRewardServerParams.h>
 #import <BJAdsCore/BJAdSupplierModel.h>
 #import <BJAdsCore/BJAdLog.h>
 #import <BJAdsCore/BJAdSdkConfig.h>

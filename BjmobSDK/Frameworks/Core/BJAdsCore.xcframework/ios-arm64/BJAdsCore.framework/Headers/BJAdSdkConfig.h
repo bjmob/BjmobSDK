@@ -38,6 +38,7 @@ extern NSString *const SDK_TAG_BAIDU;
 extern NSString *const SDK_TAG_GG;
 extern NSString *const SDK_TAG_IS;
 extern NSString *const SDK_TAG_FB;
+extern NSString *const SDK_TAG_PAG;
 
 
 extern NSString *const BJAdSdkTypeAdName;
@@ -90,6 +91,28 @@ isPhoneX = [UIApplication sharedApplication].getCurrentWindow.safeAreaInsets.bot
 /// 4 fatal + error + warning + info
 /// 5 全部打印
 @property (nonatomic, assign) BJAdLogLevel level;
+
+@end
+
+@protocol BJAdConsentProvider <NSObject>
+
+@required
+/// provider 唯一标识，建议使用渠道 tag（如 gg/csj）。
+- (NSString *)providerIdentifier;
+/// 当前 provider 是否需要发起隐私弹窗流程。
+- (BOOL)shouldRequestConsentWithConfig:(BJConfigModel *)configModel;
+/// 发起隐私弹窗流程。
+- (void)requestConsentWithConfig:(BJConfigModel *)configModel
+                      completion:(void (^ __nullable)(NSError * __nullable error))completion;
+
+@end
+
+@interface BJAdSdkConfig (Consent)
+
+/// 注册隐私弹窗 provider，重复 identifier 会覆盖旧值。
++ (void)registerConsentProvider:(id<BJAdConsentProvider>)provider;
+/// 按 identifier 取消注册 provider。
++ (void)unregisterConsentProviderForIdentifier:(NSString *)identifier;
 
 @end
 
