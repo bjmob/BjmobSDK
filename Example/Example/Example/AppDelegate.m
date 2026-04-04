@@ -28,7 +28,7 @@
     model.debugMode = YES;
     // e3aa00b33d0927ec 海外测试ID
     // a06460e31fce62fa 国内测试ID
-    [[BJAdSdkConfig shareInstance] registerAppID:@"e3aa00b33d0927ec" withConfig:model];
+    [[BJAdSdkConfig shareInstance] registerAppID:@"a06460e31fce62fa" withConfig:model];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {

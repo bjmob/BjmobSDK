@@ -11,6 +11,8 @@
 
 @interface DemoSplashViewController () <BJAdSplashDelegate>
 @property(strong,nonatomic) BJAdSplash *adSplash;
+@property(nonatomic, assign) BOOL autoShowOnLoadSuccess;
+@property(nonatomic, assign) BOOL didAutoRequestOnAppear;
 @end
 
 @implementation DemoSplashViewController
@@ -25,6 +27,14 @@
     self.dic = [[AdDataJsonManager shared] loadAdDataWithType:JsonDataType_splash];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    if (!self.didAutoRequestOnAppear) {
+        self.didAutoRequestOnAppear = YES;
+        [self loadAndShowSplashAd];
+    }
+}
+
 - (void)loadAndShowAd {
     [super loadAndShowAd];
     [self loadAndShowSplashAd];
@@ -34,6 +44,7 @@
     [super loadAd];
     [self deallocAd];
     [self loadAdWithState:AdState_Normal];
+    self.autoShowOnLoadSuccess = YES;
     [self.adSplash loadAd];
     [self loadAdWithState:AdState_Loading];
 }
@@ -50,6 +61,7 @@
     // 广告实例不要用初始化加载, 要确保每次都用最新的实例, 且一次广告流程中 delegate 不能发生变化
     [self deallocAd];
     [self loadAdWithState:AdState_Normal];
+    self.autoShowOnLoadSuccess = NO;
     [self.adSplash loadAndShowAd];
     [self loadAdWithState:AdState_Loading];
 }
@@ -81,7 +93,9 @@
     NSLog(@"广告数据拉取成功 %s", __func__);
     [self showProcessWithText:[NSString stringWithFormat:@"%s\r\n 广告拉取成功", __func__]];
     [self loadAdWithState:AdState_LoadSucceed];
-    [self showAd];
+    if (self.autoShowOnLoadSuccess) {
+        [self showAd];
+    }
 }
 
 /// 广告数据拉取失败
@@ -137,26 +151,18 @@
 - (BJAdSplash *)adSplash{
     if(!_adSplash){
         if ([self isDebug]) {
-//            _adSplash = [[BJAdSplash alloc]initWithJsonDic:self.dic viewController:self];
+            _adSplash = [[BJAdSplash alloc]initWithJsonDic:self.dic viewController:self];
         }else {
             _adSplash = [[BJAdSplash alloc]initWithViewController:self];
         }
         _adSplash.delegate = self;
-        _adSplash.timeout = 5;
         _adSplash.showLogoRequire = YES;
-        
-        // 1. logo垂直显示
-//        _adSplash.adLogoType = AdLogoTypeVertical;
-//        _adSplash.title = @"bjmob";
-//        _adSplash.logoImage = [UIImage imageNamed:@"bjmob_logo"];
-        
-        // 2. logo水平显示
 //        _adSplash.adLogoType = AdLogoTypeHorizontal;
-//        _adSplash.title = @"bjmob";
-//        _adSplash.subTitle = @"bjmob subTitle";
-//        _adSplash.logoImage = [UIImage imageNamed:@"bjmob_logo"];
+//        _adSplash.title = @"Lefun Health";
+//        _adSplash.subTitle = @"Happy Exercise, Healthy Life";
+//        _adSplash.logoImage = [UIImage imageNamed:@"58"];
+        _adSplash.timeout = 5;
         
-        // 3. 自定义logo显示
         // 获取ContentView大小
         CGSize contentViewSize = [_adSplash getLogoConentViewSize];
         // 底部view
@@ -169,7 +175,7 @@
                                                                           logoWH,
                                                                           logoWH)];
         imgV.contentMode = UIViewContentModeScaleAspectFit;
-        imgV.image = [UIImage imageNamed:@"bjmob_logo"];
+        imgV.image = [UIImage imageNamed:@"58"];
         imgV.backgroundColor = [UIColor grayColor];
         [bottomView addSubview:imgV];
         

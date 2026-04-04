@@ -24,7 +24,7 @@ target 'DemoOc' do
   pod 'Masonry', '~> 1.1.0'
 
   pod 'BjmobSDK/Core', :path => '../'
-  # pod 'BjmobSDK/CSJ',  :path => '../'
+  pod 'BjmobSDK/CSJ',  :path => '../'
   pod 'BjmobSDK/GDT',  :path => '../'
   pod 'BjmobSDK/KS',   :path => '../'
   pod 'BjmobSDK/BD',   :path => '../'
