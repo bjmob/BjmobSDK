@@ -165,6 +165,12 @@
     return d.isDebug;
 }
 
+- (void)setDemoActionButtonsEnabled:(BOOL)enabled {
+    self.btnLoad.enabled = enabled;
+    self.btnShow.enabled = enabled;
+    self.btnLoadAndShow.enabled = enabled;
+}
+
 - (UIButton *)btnLoad {
     if (!_btnLoad) {
         _btnLoad = [UIButton buttonWithType:UIButtonTypeSystem];

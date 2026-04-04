@@ -9,10 +9,16 @@
 #import "DemoSplashViewController.h"
 #import <BJAdsAdspot/BJAdSplash.h>
 
+static const NSTimeInterval kBJSplashCooldownInterval = 0.5;
+
 @interface DemoSplashViewController () <BJAdSplashDelegate>
 @property(strong,nonatomic) BJAdSplash *adSplash;
 @property(nonatomic, assign) BOOL autoShowOnLoadSuccess;
 @property(nonatomic, assign) BOOL didAutoRequestOnAppear;
+/// loadAndShow 流程进行中（防连点并发）
+@property(nonatomic, assign) BOOL splashLoadAndShowInFlight;
+/// 上次开屏结束时间（跳过/关闭/失败），短时间内禁止再次 loadAndShow，减轻「晚到关闭回调 vs 新一轮请求」竞态
+@property(nonatomic, strong) NSDate *lastSplashEndDate;
 @end
 
 @implementation DemoSplashViewController
@@ -59,11 +65,36 @@
 
 - (void)loadAndShowSplashAd{
     // 广告实例不要用初始化加载, 要确保每次都用最新的实例, 且一次广告流程中 delegate 不能发生变化
+    if (self.splashLoadAndShowInFlight) {
+        [DemoUtils showToast:@"开屏请求进行中，请稍候"];
+        return;
+    }
+    if (self.lastSplashEndDate != nil) {
+        NSTimeInterval dt = [[NSDate date] timeIntervalSinceDate:self.lastSplashEndDate];
+        if (dt < kBJSplashCooldownInterval && dt >= 0) {
+            [DemoUtils showToast:@"请稍候再试"];
+            return;
+        }
+    }
+    self.splashLoadAndShowInFlight = YES;
+    [self setDemoActionButtonsEnabled:NO];
     [self deallocAd];
     [self loadAdWithState:AdState_Normal];
     self.autoShowOnLoadSuccess = NO;
     [self.adSplash loadAndShowAd];
     [self loadAdWithState:AdState_Loading];
+}
+
+- (void)splash_clearLoadAndShowInFlightOnly {
+    self.splashLoadAndShowInFlight = NO;
+    [self setDemoActionButtonsEnabled:YES];
+}
+
+/// 跳过/关闭等「展示结束」：记录冷却时间，降低与下一轮 loadAndShow 的竞态
+- (void)splash_clearLoadAndShowInFlightAndCooldown {
+    self.splashLoadAndShowInFlight = NO;
+    self.lastSplashEndDate = [NSDate date];
+    [self setDemoActionButtonsEnabled:YES];
 }
 
 - (void)deallocAd {
@@ -103,6 +134,7 @@
     NSLog(@"广告数据拉取失败 %s - %@",__func__,error);
     [self loadAdWithState:AdState_LoadFailed];
     [self deallocAd];
+    [self splash_clearLoadAndShowInFlightOnly];
 }
 /// 广告曝光成功
 - (void)ad_exposuredWithAdsType:(adsType)adsType {
@@ -117,6 +149,7 @@
     [self showErrorWithDescription:description];
     [self loadAdWithState:AdState_LoadFailed];
     [self deallocAd];
+    [self splash_clearLoadAndShowInFlightOnly];
 }
 
 /// 广告点击
@@ -128,9 +161,13 @@
 /// 广告关闭
 - (void)ad_didCloseWithAdsType:(adsType)adsType {
     NSLog(@"广告关闭了 %s", __func__);
+    if (!_adSplash) {
+        return;
+    }
     [self showProcessWithText:[NSString stringWithFormat:@"%s\r\n 广告关闭", __func__]];
     [self loadAdWithState:AdState_Normal];
     [self deallocAd];
+    [self splash_clearLoadAndShowInFlightAndCooldown];
 }
 
 /// 广告倒计时结束
@@ -142,64 +179,20 @@
 /// 点击了跳过
 - (void)ad_splashOnAdSkipClicked {
     NSLog(@"点击了跳过 %s", __func__);
+    if (!_adSplash) {
+        return;
+    }
     [self showProcessWithText:[NSString stringWithFormat:@"%s\r\n 点击了跳过", __func__]];
     [self loadAdWithState:AdState_Normal];
     [self deallocAd];
+    [self splash_clearLoadAndShowInFlightAndCooldown];
 }
 
 #pragma mark - lazy
 - (BJAdSplash *)adSplash{
     if(!_adSplash){
-        if ([self isDebug]) {
-            _adSplash = [[BJAdSplash alloc]initWithJsonDic:self.dic viewController:self];
-        }else {
-            _adSplash = [[BJAdSplash alloc]initWithViewController:self];
-        }
+        _adSplash = [[BJAdSplash alloc]initWithViewController:self];
         _adSplash.delegate = self;
-        _adSplash.showLogoRequire = YES;
-//        _adSplash.adLogoType = AdLogoTypeHorizontal;
-//        _adSplash.title = @"Lefun Health";
-//        _adSplash.subTitle = @"Happy Exercise, Healthy Life";
-//        _adSplash.logoImage = [UIImage imageNamed:@"58"];
-        _adSplash.timeout = 5;
-        
-        // 获取ContentView大小
-        CGSize contentViewSize = [_adSplash getLogoConentViewSize];
-        // 底部view
-        UIView *bottomView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, contentViewSize.width, contentViewSize.height)];
-
-        // logo
-        CGFloat logoWH = contentViewSize.height / 2;
-        UIImageView *imgV = [[UIImageView alloc] initWithFrame:CGRectMake(50,
-                                                                          (contentViewSize.height - logoWH) / 2,
-                                                                          logoWH,
-                                                                          logoWH)];
-        imgV.contentMode = UIViewContentModeScaleAspectFit;
-        imgV.image = [UIImage imageNamed:@"58"];
-        imgV.backgroundColor = [UIColor grayColor];
-        [bottomView addSubview:imgV];
-        
-        // title
-        UILabel * title = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(imgV.frame) + 10,
-                                                                   CGRectGetMinY(imgV.frame) + 3,
-                                                                   _adSplash.viewController.view.frame.size.width - 20,
-                                                                   20)];
-        title.font = [UIFont systemFontOfSize:15];
-        title.textAlignment = NSTextAlignmentLeft;
-        title.text = @"bjmob";
-        [bottomView addSubview:title];
-        // subtitle
-        UILabel * subTitle = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(imgV.frame) + 10,
-                                                                      CGRectGetMaxY(imgV.frame) - 3 - 20,
-                                                                      _adSplash.viewController.view.frame.size.width - 20,
-                                                                      20)];
-        subTitle.font = [UIFont systemFontOfSize:13];
-        subTitle.textAlignment = NSTextAlignmentLeft;
-        subTitle.text = @"bjmob subtitle";
-        [bottomView addSubview:subTitle];
-        
-        _adSplash.logoContentView = bottomView;
-        
     }
     return _adSplash;
 }

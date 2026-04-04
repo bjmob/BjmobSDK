@@ -41,6 +41,9 @@ typedef enum : NSUInteger {
 
 - (void)showErrorWithDescription:(NSDictionary *)description;
 - (BOOL)isDebug;
+
+/// 控制 Demo 三个广告按钮是否可点（子类在请求进行中可置 NO 防连点）
+- (void)setDemoActionButtonsEnabled:(BOOL)enabled;
 @end
 
 NS_ASSUME_NONNULL_END
