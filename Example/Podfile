@@ -17,6 +17,8 @@ target 'DemoSwfit' do
   use_frameworks!
   project 'ExampleSwift/ExampleSwift.xcodeproj'
 
+  pod 'Masonry', '~> 1.1.0'
+
   if USE_LOCAL_BJMOB_SDK
     pod 'BjmobSDK', :path => '../', :subspecs => bjmob_subspecs
   else

@@ -10,9 +10,9 @@
 		01DC32C42A7CA0BE0068983D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DC32C32A7CA0BE0068983D /* AppDelegate.swift */; };
 		01DC32C62A7CA0BE0068983D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DC32C52A7CA0BE0068983D /* SceneDelegate.swift */; };
 		01DC32C82A7CA0BE0068983D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DC32C72A7CA0BE0068983D /* ViewController.swift */; };
-		01DC32CB2A7CA0BE0068983D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01DC32C92A7CA0BE0068983D /* Main.storyboard */; };
 		01DC32CD2A7CA0BF0068983D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01DC32CC2A7CA0BF0068983D /* Assets.xcassets */; };
 		01DC32D02A7CA0BF0068983D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01DC32CE2A7CA0BF0068983D /* LaunchScreen.storyboard */; };
+		596258532F8248D2004D3D2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 596258512F8248D2004D3D2B /* Main.storyboard */; };
 		7E91834CA004745344EB6274 /* Pods_DemoSwfit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7201FAA66DF5877B60864EA6 /* Pods_DemoSwfit.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,11 +21,11 @@
 		01DC32C32A7CA0BE0068983D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01DC32C52A7CA0BE0068983D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		01DC32C72A7CA0BE0068983D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		01DC32CA2A7CA0BE0068983D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01DC32CC2A7CA0BF0068983D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01DC32CF2A7CA0BF0068983D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01DC32D12A7CA0BF0068983D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26851E2139863F178B47E4C4 /* Pods-ExampleSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleSwift.debug.xcconfig"; path = "Target Support Files/Pods-ExampleSwift/Pods-ExampleSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		596258522F8248D2004D3D2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		60E97BE806A8B21EE479B5CB /* Pods-DemoSwfit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoSwfit.release.xcconfig"; path = "Target Support Files/Pods-DemoSwfit/Pods-DemoSwfit.release.xcconfig"; sourceTree = "<group>"; };
 		7201FAA66DF5877B60864EA6 /* Pods_DemoSwfit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoSwfit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95A30467FF23E6774F6AD495 /* Pods-ExampleSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleSwift.release.xcconfig"; path = "Target Support Files/Pods-ExampleSwift/Pods-ExampleSwift.release.xcconfig"; sourceTree = "<group>"; };
@@ -65,10 +65,10 @@
 		01DC32C22A7CA0BE0068983D /* ExampleSwift */ = {
 			isa = PBXGroup;
 			children = (
+				596258512F8248D2004D3D2B /* Main.storyboard */,
 				01DC32C32A7CA0BE0068983D /* AppDelegate.swift */,
 				01DC32C52A7CA0BE0068983D /* SceneDelegate.swift */,
 				01DC32C72A7CA0BE0068983D /* ViewController.swift */,
-				01DC32C92A7CA0BE0068983D /* Main.storyboard */,
 				01DC32CC2A7CA0BF0068983D /* Assets.xcassets */,
 				01DC32CE2A7CA0BF0068983D /* LaunchScreen.storyboard */,
 				01DC32D12A7CA0BF0068983D /* Info.plist */,
@@ -159,7 +159,7 @@
 			files = (
 				01DC32D02A7CA0BF0068983D /* LaunchScreen.storyboard in Resources */,
 				01DC32CD2A7CA0BF0068983D /* Assets.xcassets in Resources */,
-				01DC32CB2A7CA0BE0068983D /* Main.storyboard in Resources */,
+				596258532F8248D2004D3D2B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,9 +174,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-DemoSwfit/Pods-DemoSwfit-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-DemoSwfit/Pods-DemoSwfit-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -191,9 +195,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-DemoSwfit/Pods-DemoSwfit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-DemoSwfit/Pods-DemoSwfit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -238,20 +246,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		01DC32C92A7CA0BE0068983D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				01DC32CA2A7CA0BE0068983D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		01DC32CE2A7CA0BF0068983D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				01DC32CF2A7CA0BF0068983D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		596258512F8248D2004D3D2B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				596258522F8248D2004D3D2B /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
