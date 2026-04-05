@@ -7,23 +7,23 @@ PODS:
   - Ads-CN/BUAdSDK (6.7.0.8)
   - Ads-Global/PangleSDK (7.9.0.6)
   - BaiduMobAdSDK (10.032)
-  - BjmobSDK/BD (0.1.41):
+  - BjmobSDK/BD (1.1.41):
     - BaiduMobAdSDK (= 10.032)
     - BjmobSDK/Core
-  - BjmobSDK/Core (0.1.41)
-  - BjmobSDK/CSJ (0.1.41):
+  - BjmobSDK/Core (1.1.41)
+  - BjmobSDK/CSJ (1.1.41):
     - Ads-CN (= 6.7.0.8)
     - BjmobSDK/Core
-  - BjmobSDK/GDT (0.1.41):
+  - BjmobSDK/GDT (1.1.41):
     - BjmobSDK/Core
-    - GDTMobSDK
-  - BjmobSDK/GG (0.1.41):
+    - GDTMobSDK (= 4.15.80)
+  - BjmobSDK/GG (1.1.41):
     - BjmobSDK/Core
     - Google-Mobile-Ads-SDK (= 12.8.0)
-  - BjmobSDK/KS (0.1.41):
+  - BjmobSDK/KS (1.1.41):
     - BjmobSDK/Core
     - KSAdSDK (= 4.12.20.3)
-  - BjmobSDK/PAG (0.1.41):
+  - BjmobSDK/PAG (1.1.41):
     - Ads-Global/PangleSDK (= 7.9.0.6)
     - BjmobSDK/Core
   - Bugly (2.6.1)
@@ -65,13 +65,13 @@ PODS:
   - Masonry (1.1.0)
 
 DEPENDENCIES:
-  - BjmobSDK/BD (from `../`)
-  - BjmobSDK/Core (from `../`)
-  - BjmobSDK/CSJ (from `../`)
-  - BjmobSDK/GDT (from `../`)
-  - BjmobSDK/GG (from `../`)
-  - BjmobSDK/KS (from `../`)
-  - BjmobSDK/PAG (from `../`)
+  - BjmobSDK/BD (= 1.1.41)
+  - BjmobSDK/Core (= 1.1.41)
+  - BjmobSDK/CSJ (= 1.1.41)
+  - BjmobSDK/GDT (= 1.1.41)
+  - BjmobSDK/GG (= 1.1.41)
+  - BjmobSDK/KS (= 1.1.41)
+  - BjmobSDK/PAG (= 1.1.41)
   - Bugly
   - Masonry (~> 1.1.0)
 
@@ -80,6 +80,7 @@ SPEC REPOS:
     - Ads-CN
     - Ads-Global
     - BaiduMobAdSDK
+    - BjmobSDK
     - Bugly
     - BUTTSDKFramework
     - GDTMobSDK
@@ -88,15 +89,11 @@ SPEC REPOS:
     - KSAdSDK
     - Masonry
 
-EXTERNAL SOURCES:
-  BjmobSDK:
-    :path: "../"
-
 SPEC CHECKSUMS:
   Ads-CN: 4dcb5105a7105f76bcefb246e69daf6c39db2778
   Ads-Global: fb1fa75ebbf100ab9ff216d81b71a05cf1a73675
   BaiduMobAdSDK: d8f9357d5d1842b4def0370d94e8ad1e1ac2c370
-  BjmobSDK: 02ff8e1f446359456ff8eb12a598d0bd88bab4d6
+  BjmobSDK: 8b6c4e64130af632570640a87da6b4ce126952fd
   Bugly: 217ac2ce5f0f2626d43dbaa4f70764c953a26a31
   BUTTSDKFramework: 914058900f46707f12a6e8c10e8da6ba4e891c3e
   GDTMobSDK: 55dae2ed62505cb2ace9634f8bd7936e6be99e12
@@ -105,6 +102,6 @@ SPEC CHECKSUMS:
   KSAdSDK: 36731149c887e5f0170c243a0ae8c5eee746ff48
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
-PODFILE CHECKSUM: eb391983c281c63f57bacc34df3fb47067d30f3c
+PODFILE CHECKSUM: 987e6ebc7918df4583dbdfc3cb32d4450a31afa7
 
 COCOAPODS: 1.16.2

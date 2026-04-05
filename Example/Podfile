@@ -1,19 +1,27 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '12.0'
 
+# 使用 CocoaPods 官方源（默认 CDN 即可拉取已发布的 BjmobSDK）
+# source 'https://cdn.cocoapods.org/'
+
 workspace 'Example.xcworkspace'
+
+# true：使用仓库根目录本地 BjmobSDK（改 podspec / xcframework 后 pod install 即测）
+# false：使用 CocoaPods 已发布版本（与线上接入一致）
+USE_LOCAL_BJMOB_SDK = false
+
+bjmob_sdk_version = '1.1.41'
+bjmob_subspecs = ['Core', 'CSJ', 'GDT', 'KS', 'BD', 'GG', 'PAG']
 
 target 'DemoSwfit' do
   use_frameworks!
   project 'ExampleSwift/ExampleSwift.xcodeproj'
 
-  pod 'BjmobSDK/Core', :path => '../'
-  pod 'BjmobSDK/CSJ',  :path => '../'
-  pod 'BjmobSDK/GDT',  :path => '../'
-  pod 'BjmobSDK/KS',   :path => '../'
-  pod 'BjmobSDK/BD',   :path => '../'
-  pod 'BjmobSDK/GG',   :path => '../'
-  pod 'BjmobSDK/PAG',  :path => '../'
+  if USE_LOCAL_BJMOB_SDK
+    pod 'BjmobSDK', :path => '../', :subspecs => bjmob_subspecs
+  else
+    pod 'BjmobSDK', bjmob_sdk_version, :subspecs => bjmob_subspecs
+  end
 
   pod 'Bugly'
 end
@@ -23,13 +31,11 @@ target 'DemoOc' do
   project 'Example/Example.xcodeproj'
   pod 'Masonry', '~> 1.1.0'
 
-  pod 'BjmobSDK/Core', :path => '../'
-  pod 'BjmobSDK/CSJ',  :path => '../'
-  pod 'BjmobSDK/GDT',  :path => '../'
-  pod 'BjmobSDK/KS',   :path => '../'
-  pod 'BjmobSDK/BD',   :path => '../'
-  pod 'BjmobSDK/GG',   :path => '../'
-  pod 'BjmobSDK/PAG',  :path => '../'
+  if USE_LOCAL_BJMOB_SDK
+    pod 'BjmobSDK', :path => '../', :subspecs => bjmob_subspecs
+  else
+    pod 'BjmobSDK', bjmob_sdk_version, :subspecs => bjmob_subspecs
+  end
 
 end
 
