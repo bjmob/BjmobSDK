@@ -13,7 +13,7 @@
 ### 1.2 引入SDK
 
 ```
-  pod 'BjmobSDK', '0.1.41'
+  pod 'BjmobSDK', '1.1.41'
   
   
   执行 pod install --repo-update
