@@ -24,7 +24,7 @@ Pod::Spec.new do |spec|
 
   spec.homepage     = "https://github.com/bjmob/BjmobSDK"
 
-  spec.author       = { "bjmob" => "769871707@qq.com" }
+  spec.author       = { "bjmob" => "ads@bjmob.com" }
   spec.source       = { :git => "https://github.com/bjmob/BjmobSDK.git", :tag => "#{spec.version}" }
   
   spec.user_target_xcconfig = { 'OTHER_LDFLAGS' => ['-ObjC'], 'ENABLE_BITCODE' => 'NO' }
@@ -61,7 +61,7 @@ Pod::Spec.new do |spec|
   # ══════════ GDT: 广点通适配器 ══════════
   spec.subspec 'GDT' do |gdt|
     gdt.dependency 'BjmobSDK/Core'
-    gdt.dependency 'GDTMobSDK'
+    gdt.dependency 'GDTMobSDK', '4.15.80'
     gdt.vendored_frameworks = [
       'BjmobSDK/Frameworks/Adapter/BJAdsAdapter_GDT.xcframework'
     ]
